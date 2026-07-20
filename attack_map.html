@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_74d6425c4563473478bf698d163ba25e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_74d6425c4563473478bf698d163ba25e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_74d6425c4563473478bf698d163ba25e = L.map(
+                "map_74d6425c4563473478bf698d163ba25e",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_74d6425c4563473478bf698d163ba25e);
+
+            
+
+        
+    
+            var tile_layer_b547a6deccf898c5edd48c705342a04d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b547a6deccf898c5edd48c705342a04d.addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_37f7e9e123e703bd2fbf7424431877ac = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_d78b99bea7e957bd963d20ae514f9332 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1bd9336262fe56514b4ef1c457bc67ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a19212e0de13cf063ce4f7e3ecd1016 = $(`<div id="html_9a19212e0de13cf063ce4f7e3ecd1016" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.37<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">49 pps</span>             </div>             </div>`)[0];
+                popup_1bd9336262fe56514b4ef1c457bc67ae.setContent(html_9a19212e0de13cf063ce4f7e3ecd1016);
+            
+        
+
+        marker_37f7e9e123e703bd2fbf7424431877ac.bindPopup(popup_1bd9336262fe56514b4ef1c457bc67ae)
+        ;
+
+        
+    
+    
+            marker_37f7e9e123e703bd2fbf7424431877ac.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.37 - 49 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37f7e9e123e703bd2fbf7424431877ac.setIcon(icon_d78b99bea7e957bd963d20ae514f9332);
+            
+    
+            var circle_fb609a495f936998c80d5cf427157f34 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_a0a499ccf79c93af6c990eb64de8ee2a = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_24000e81f04ca7870b9e4dcafbe286d7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_200937f609e3cad8618f1b9ad9dc6f1d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83bd06113abdf493cf358a258dc31ea1 = $(`<div id="html_83bd06113abdf493cf358a258dc31ea1" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.252<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">21 pps</span>             </div>             </div>`)[0];
+                popup_200937f609e3cad8618f1b9ad9dc6f1d.setContent(html_83bd06113abdf493cf358a258dc31ea1);
+            
+        
+
+        marker_a0a499ccf79c93af6c990eb64de8ee2a.bindPopup(popup_200937f609e3cad8618f1b9ad9dc6f1d)
+        ;
+
+        
+    
+    
+            marker_a0a499ccf79c93af6c990eb64de8ee2a.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.252 - 21 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0a499ccf79c93af6c990eb64de8ee2a.setIcon(icon_24000e81f04ca7870b9e4dcafbe286d7);
+            
+    
+            var circle_31d4dd25fc1254f6b6d614b2c2f1f330 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_191268094af3871310e56c7e4207a6b3 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_6029aaf62ca6da8725b79a166dcf8624 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db5b9cc19f7867f2a1595736eea540a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02af58f4d588ed20071b1023c545f723 = $(`<div id="html_02af58f4d588ed20071b1023c545f723" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.194<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">25 pps</span>             </div>             </div>`)[0];
+                popup_db5b9cc19f7867f2a1595736eea540a1.setContent(html_02af58f4d588ed20071b1023c545f723);
+            
+        
+
+        marker_191268094af3871310e56c7e4207a6b3.bindPopup(popup_db5b9cc19f7867f2a1595736eea540a1)
+        ;
+
+        
+    
+    
+            marker_191268094af3871310e56c7e4207a6b3.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.194 - 25 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_191268094af3871310e56c7e4207a6b3.setIcon(icon_6029aaf62ca6da8725b79a166dcf8624);
+            
+    
+            var circle_2871c29ef38b444d6732c0b663486057 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_2e08c04fca9c446f6c9b1314a0bba103 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_495327d543ad4ffd853830cfb68bd612 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08129557f82244cbf874ff919a7fb9a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46a031d25264afe9efa769ac7d3f8723 = $(`<div id="html_46a031d25264afe9efa769ac7d3f8723" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.167<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">22 pps</span>             </div>             </div>`)[0];
+                popup_08129557f82244cbf874ff919a7fb9a2.setContent(html_46a031d25264afe9efa769ac7d3f8723);
+            
+        
+
+        marker_2e08c04fca9c446f6c9b1314a0bba103.bindPopup(popup_08129557f82244cbf874ff919a7fb9a2)
+        ;
+
+        
+    
+    
+            marker_2e08c04fca9c446f6c9b1314a0bba103.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.167 - 22 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e08c04fca9c446f6c9b1314a0bba103.setIcon(icon_495327d543ad4ffd853830cfb68bd612);
+            
+    
+            var circle_6ffb5ac55f7c0159875603aa5211c172 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_b9fd415a5496d7c6a2b54e9545ca6f5b = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_7034884892beebaac2a03a82e143cf6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec6bcec02ea1560f0095de6f12092833 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_177a6b64c6db3bb207637e3f0d8bb69a = $(`<div id="html_177a6b64c6db3bb207637e3f0d8bb69a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.154<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">26 pps</span>             </div>             </div>`)[0];
+                popup_ec6bcec02ea1560f0095de6f12092833.setContent(html_177a6b64c6db3bb207637e3f0d8bb69a);
+            
+        
+
+        marker_b9fd415a5496d7c6a2b54e9545ca6f5b.bindPopup(popup_ec6bcec02ea1560f0095de6f12092833)
+        ;
+
+        
+    
+    
+            marker_b9fd415a5496d7c6a2b54e9545ca6f5b.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.154 - 26 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9fd415a5496d7c6a2b54e9545ca6f5b.setIcon(icon_7034884892beebaac2a03a82e143cf6e);
+            
+    
+            var circle_e5cffe4a752d705949d9d1ab424bbfe6 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_e59f02293d70ee143c39206b5faeac98 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_225165668fa98f29b23a9be18950573a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b0023e9a3b7293dea0fc8a9e10eb085 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8b1c9e7d9eca1f30b40c5d4ee2efb37 = $(`<div id="html_b8b1c9e7d9eca1f30b40c5d4ee2efb37" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.17<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">28 pps</span>             </div>             </div>`)[0];
+                popup_0b0023e9a3b7293dea0fc8a9e10eb085.setContent(html_b8b1c9e7d9eca1f30b40c5d4ee2efb37);
+            
+        
+
+        marker_e59f02293d70ee143c39206b5faeac98.bindPopup(popup_0b0023e9a3b7293dea0fc8a9e10eb085)
+        ;
+
+        
+    
+    
+            marker_e59f02293d70ee143c39206b5faeac98.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.17 - 28 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e59f02293d70ee143c39206b5faeac98.setIcon(icon_225165668fa98f29b23a9be18950573a);
+            
+    
+            var circle_260f6133a8620386c600c8e3fef20668 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_ee1e8c6a0684738fceb7ccc6a198c840 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_4d58b414c4abab92089e66d2aeae3e62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed87de0cc05dbe7aea5cab6b87640ca4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e04b64522c9d1a20ea2358393c3847b = $(`<div id="html_7e04b64522c9d1a20ea2358393c3847b" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.187<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">76 pps</span>             </div>             </div>`)[0];
+                popup_ed87de0cc05dbe7aea5cab6b87640ca4.setContent(html_7e04b64522c9d1a20ea2358393c3847b);
+            
+        
+
+        marker_ee1e8c6a0684738fceb7ccc6a198c840.bindPopup(popup_ed87de0cc05dbe7aea5cab6b87640ca4)
+        ;
+
+        
+    
+    
+            marker_ee1e8c6a0684738fceb7ccc6a198c840.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.187 - 76 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee1e8c6a0684738fceb7ccc6a198c840.setIcon(icon_4d58b414c4abab92089e66d2aeae3e62);
+            
+    
+            var circle_aeb6dbcf62cb2f6a7a8d171d172fc78a = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_7925c2d8970444d8bb88ee97c0d2b583 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_7987f8a2b1a9376fff56cb99129bef8d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78db1a379780af829052d01ce687b9d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c213525f9104a3bd1a5f553fc3603ce = $(`<div id="html_4c213525f9104a3bd1a5f553fc3603ce" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.107<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">78 pps</span>             </div>             </div>`)[0];
+                popup_78db1a379780af829052d01ce687b9d5.setContent(html_4c213525f9104a3bd1a5f553fc3603ce);
+            
+        
+
+        marker_7925c2d8970444d8bb88ee97c0d2b583.bindPopup(popup_78db1a379780af829052d01ce687b9d5)
+        ;
+
+        
+    
+    
+            marker_7925c2d8970444d8bb88ee97c0d2b583.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.107 - 78 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7925c2d8970444d8bb88ee97c0d2b583.setIcon(icon_7987f8a2b1a9376fff56cb99129bef8d);
+            
+    
+            var circle_7cda9db070cd699f955a3dfbfec57471 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_7b370ce2e42355b5a869ebc021fda53e = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_2b5bb4749a4452307029c680c88a33c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1815d2e0b4a71a373111d9f408103376 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42fffa7e7f0a747155a33dac82aa1732 = $(`<div id="html_42fffa7e7f0a747155a33dac82aa1732" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.215<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">97 pps</span>             </div>             </div>`)[0];
+                popup_1815d2e0b4a71a373111d9f408103376.setContent(html_42fffa7e7f0a747155a33dac82aa1732);
+            
+        
+
+        marker_7b370ce2e42355b5a869ebc021fda53e.bindPopup(popup_1815d2e0b4a71a373111d9f408103376)
+        ;
+
+        
+    
+    
+            marker_7b370ce2e42355b5a869ebc021fda53e.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.215 - 97 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7b370ce2e42355b5a869ebc021fda53e.setIcon(icon_2b5bb4749a4452307029c680c88a33c4);
+            
+    
+            var circle_e14fae499965552d0cb78a46af7f9eb6 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_4081795d1bee5160242edd4d032bc9b9 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_01d0fac71b53078761994bccf6822c76 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ab1fb7ec44a57b99c46afe88c0ad0aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3521f46a2dc43a4ca86d7b0812518021 = $(`<div id="html_3521f46a2dc43a4ca86d7b0812518021" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.151<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">76 pps</span>             </div>             </div>`)[0];
+                popup_3ab1fb7ec44a57b99c46afe88c0ad0aa.setContent(html_3521f46a2dc43a4ca86d7b0812518021);
+            
+        
+
+        marker_4081795d1bee5160242edd4d032bc9b9.bindPopup(popup_3ab1fb7ec44a57b99c46afe88c0ad0aa)
+        ;
+
+        
+    
+    
+            marker_4081795d1bee5160242edd4d032bc9b9.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.151 - 76 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4081795d1bee5160242edd4d032bc9b9.setIcon(icon_01d0fac71b53078761994bccf6822c76);
+            
+    
+            var circle_d187a3fad90d6d976734bf98bcbd7968 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_82ac88f1c3cd518068f309fcf79d644e = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_6126dc672773e3efc8aac31bd55f80e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e3b74fdcb3e3383fc13c4370750e18f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ef916ff7c505fd4e4ab77690e03673a = $(`<div id="html_4ef916ff7c505fd4e4ab77690e03673a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.188<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">83 pps</span>             </div>             </div>`)[0];
+                popup_9e3b74fdcb3e3383fc13c4370750e18f.setContent(html_4ef916ff7c505fd4e4ab77690e03673a);
+            
+        
+
+        marker_82ac88f1c3cd518068f309fcf79d644e.bindPopup(popup_9e3b74fdcb3e3383fc13c4370750e18f)
+        ;
+
+        
+    
+    
+            marker_82ac88f1c3cd518068f309fcf79d644e.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.188 - 83 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_82ac88f1c3cd518068f309fcf79d644e.setIcon(icon_6126dc672773e3efc8aac31bd55f80e3);
+            
+    
+            var circle_49cea79dc9f6f81ce140081f8fe2d03e = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_afab6da18e216c727212984b09f0f4f7 = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_b42254de5251dbf8119bc1b66b922272 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0e0249b442032a22f89bac128fd8229 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cda00c50bb77f262e0c17a7f3b1b1a57 = $(`<div id="html_cda00c50bb77f262e0c17a7f3b1b1a57" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.77<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">80 pps</span>             </div>             </div>`)[0];
+                popup_a0e0249b442032a22f89bac128fd8229.setContent(html_cda00c50bb77f262e0c17a7f3b1b1a57);
+            
+        
+
+        marker_afab6da18e216c727212984b09f0f4f7.bindPopup(popup_a0e0249b442032a22f89bac128fd8229)
+        ;
+
+        
+    
+    
+            marker_afab6da18e216c727212984b09f0f4f7.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.77 - 80 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afab6da18e216c727212984b09f0f4f7.setIcon(icon_b42254de5251dbf8119bc1b66b922272);
+            
+    
+            var circle_a8f8ed559ecd52d7bd9c224d8463bbd2 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var marker_2a82b4fd2e3a659882c84046f25dc2ac = L.marker(
+                [20.0, 0.0],
+                {
+}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+    
+            var icon_6899ed890932d5b8775c583db23081a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "exclamation-triangle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e585efee0f8964fe46b9495d1eea319 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_922fbff4195c739a4eec8f021c6aaab8 = $(`<div id="html_922fbff4195c739a4eec8f021c6aaab8" style="width: 100.0%; height: 100.0%;">             <div style="font-family: monospace; min-width: 220px;">                 <h3 style="color: #ff4444; margin:0;">🚨 ATTACK SOURCE</h3>                 <hr style="margin:5px 0;">                 <b>IP:</b> 192.168.1.223<br>                 <b>Location:</b> Local, Local Network<br>                 <b>Rate:</b> <span style="color:#ff4444">50 pps</span>             </div>             </div>`)[0];
+                popup_6e585efee0f8964fe46b9495d1eea319.setContent(html_922fbff4195c739a4eec8f021c6aaab8);
+            
+        
+
+        marker_2a82b4fd2e3a659882c84046f25dc2ac.bindPopup(popup_6e585efee0f8964fe46b9495d1eea319)
+        ;
+
+        
+    
+    
+            marker_2a82b4fd2e3a659882c84046f25dc2ac.bindTooltip(
+                `<div>
+                     ⚠️ 192.168.1.223 - 50 pps
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a82b4fd2e3a659882c84046f25dc2ac.setIcon(icon_6899ed890932d5b8775c583db23081a6);
+            
+    
+            var circle_a0231dd11d70cd5f41ee6a0aa7ce7ac4 = L.circle(
+                [20.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 200000, "stroke": true, "weight": 1}
+            ).addTo(map_74d6425c4563473478bf698d163ba25e);
+        
+</script>
+</html>

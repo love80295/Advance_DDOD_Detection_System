@@ -1,0 +1,47 @@
+[14:08:02] ✅ CyberShield X Ultimate Edition Ready
+[14:08:02] 📡 Click 'Start Monitoring' to begin real packet capture
+[14:08:02] 💡 Make sure to run with sudo for packet capture
+[14:08:22] 🚀 Starting real packet capture...
+[14:08:22] ✅ Detection engine active - Capturing packets
+[14:08:22] 📡 Monitoring network traffic in real-time
+[14:08:28] ✅ Model loaded successfully
+[14:08:28] 🚀 Starting Real-Time Detection...
+[14:08:28] 📡 Monitoring network traffic...
+[14:08:39] ===== REAL-TIME RESULT =====
+[14:08:39] Packets: 416, Rate: 41.03, IPs: 348
+[14:08:39] ✅ Normal Traffic
+[14:08:49] ===== REAL-TIME RESULT =====
+[14:08:49] Packets: 543, Rate: 54.11, IPs: 464
+[14:08:49] ✅ Normal Traffic
+[14:08:59] ===== REAL-TIME RESULT =====
+[14:08:59] Packets: 1211, Rate: 120.88, IPs: 1151
+[14:08:59] ✅ Normal Traffic
+[14:09:09] ===== REAL-TIME RESULT =====
+[14:09:09] Packets: 456, Rate: 45.36, IPs: 407
+[14:09:09] ✅ Normal Traffic
+[14:09:19] ===== REAL-TIME RESULT =====
+[14:09:19] Packets: 678, Rate: 67.56, IPs: 577
+[14:09:19] ✅ Normal Traffic
+[14:09:29] ===== REAL-TIME RESULT =====
+[14:09:29] Packets: 543, Rate: 54.24, IPs: 477
+[14:09:29] ✅ Normal Traffic
+[14:09:39] ===== REAL-TIME RESULT =====
+[14:09:39] Packets: 2073, Rate: 206.11, IPs: 2021
+[14:09:39] ✅ Normal Traffic
+[14:09:49] ===== REAL-TIME RESULT =====
+[14:09:49] Packets: 682, Rate: 67.96, IPs: 626
+[14:09:49] ✅ Normal Traffic
+[14:09:59] ===== REAL-TIME RESULT =====
+[14:09:59] Packets: 485, Rate: 48.33, IPs: 421
+[14:09:59] ✅ Normal Traffic
+[14:10:09] ===== REAL-TIME RESULT =====
+[14:10:09] Packets: 993, Rate: 99.30, IPs: 943
+[14:10:09] ✅ Normal Traffic
+[14:10:19] ===== REAL-TIME RESULT =====
+[14:10:19] Packets: 756, Rate: 75.22, IPs: 664
+[14:10:19] ✅ Normal Traffic
+[14:10:29] ===== REAL-TIME RESULT =====
+[14:10:29] Packets: 493, Rate: 49.13, IPs: 396
+[14:10:29] ✅ Normal Traffic
+[14:10:34] 🛑 Stopping detection...
+[14:10:34] ✅ Detection stopped

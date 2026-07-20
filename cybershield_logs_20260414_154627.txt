@@ -1,0 +1,16 @@
+=== CYBERSHIELD X DDoS DETECTION LOGS ===
+Export Time: 2026-04-14 15:46:27
+==================================================
+
+[15:45:54] 💾 Logs exported to cybershield_logs_20260414_154554.txt
+[15:46:03] 🚀 Initializing CyberShield X Detection Engine...
+[15:46:03] ✅ Detection engine active - Monitoring network traffic
+[15:46:09] ✅ Model loaded successfully
+[15:46:09] 🚀 Starting Real-Time Detection...
+[15:46:09] 📡 Monitoring network traffic...
+[15:46:19] ===== REAL-TIME RESULT =====
+[15:46:19] Packets: 24683, Rate: 2469.01, IPs: 98
+[15:46:19] Suspicious IPs: 2
+[15:46:19] ✅ Normal Traffic
+
+=== SUSPICIOUS IPS ===
